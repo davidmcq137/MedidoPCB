@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name medido)(type Legacy)(uri /home/davidmcq/DeltaScale/MedidoPump/medido.lib)(options "")(descr ""))
+  (lib (name MedidoPump-rescue)(type Legacy)(uri ${KIPRJMOD}/MedidoPump-rescue.lib)(options "")(descr "")(disabled))
+)
