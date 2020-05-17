@@ -7,7 +7,7 @@ encoding utf-8
 Sheet 1 1
 Title "Medido Pump"
 Date "2020-03-20"
-Rev "2.0"
+Rev "3.0"
 Comp "DFM"
 Comment1 ""
 Comment2 ""
@@ -884,11 +884,11 @@ Wire Wire Line
 	4450 5200 2000 5200
 Wire Wire Line
 	4450 1800 4450 5200
-Text Notes 6500 5700 0    50   ~ 0
+Text Notes 6750 5950 0    50   ~ 0
 Blk
-Text Notes 6500 5800 0    50   ~ 0
+Text Notes 6750 6050 0    50   ~ 0
 Red
-Text Notes 6500 5900 0    50   ~ 0
+Text Notes 6750 6150 0    50   ~ 0
 Wht
 Wire Wire Line
 	6450 5950 6200 5950
@@ -1101,17 +1101,6 @@ F 1 "+5V" H 3465 1173 50  0000 C CNN
 F 2 "" H 3450 1000 50  0001 C CNN
 F 3 "" H 3450 1000 50  0001 C CNN
 	1    3450 1000
-	1    0    0    -1  
-$EndComp
-$Comp
-L MedidoPump-rescue:PowerButton-medido U2
-U 1 1 5E6F1000
-P 2600 3850
-F 0 "U2" H 2550 3450 50  0000 L CNN
-F 1 "PowerButton" H 2400 3350 50  0000 L CNN
-F 2 "MedidoFootprints:PowerButton" H 2350 3750 50  0001 C CNN
-F 3 "" H 2350 3750 50  0001 C CNN
-	1    2600 3850
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1346,4 +1335,80 @@ Wire Wire Line
 	6300 2000 6750 2000
 Wire Wire Line
 	6450 1700 6750 1700
+$Comp
+L Connector:Conn_01x04_Male J8
+U 1 1 5E8A686A
+P 5150 5800
+F 0 "J8" H 5250 6000 50  0000 R CNN
+F 1 "PwrButton" H 5400 6100 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 5150 5800 50  0001 C CNN
+F 3 "~" H 5150 5800 50  0001 C CNN
+	1    5150 5800
+	-1   0    0    1   
+$EndComp
+Text Notes 5250 5950 0    50   ~ 0
+Gnd
+Text Notes 5250 5850 0    50   ~ 0
++5
+Text Notes 5250 5750 0    50   ~ 0
+S1
+Text Notes 5250 5650 0    50   ~ 0
+S3
+Wire Wire Line
+	4950 5900 4700 5900
+Wire Wire Line
+	4700 5900 4700 5950
+$Comp
+L power:GND #PWR047
+U 1 1 5E8C844A
+P 4700 5950
+F 0 "#PWR047" H 4700 5700 50  0001 C CNN
+F 1 "GND" H 4705 5777 50  0000 C CNN
+F 2 "" H 4700 5950 50  0001 C CNN
+F 3 "" H 4700 5950 50  0001 C CNN
+	1    4700 5950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 5800 4500 5800
+Wire Wire Line
+	4500 5800 4500 5700
+$Comp
+L power:+5V #PWR046
+U 1 1 5E8CF33F
+P 4500 5700
+F 0 "#PWR046" H 4500 5550 50  0001 C CNN
+F 1 "+5V" H 4515 5873 50  0000 C CNN
+F 2 "" H 4500 5700 50  0001 C CNN
+F 3 "" H 4500 5700 50  0001 C CNN
+	1    4500 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L medido:PowerButton U2
+U 1 1 5E8E42C3
+P 2600 3850
+F 0 "U2" H 2600 4265 50  0000 C CNN
+F 1 "PowerButton" H 2600 4174 50  0000 C CNN
+F 2 "MedidoFootprints:PowerButton" H 2350 3750 50  0001 C CNN
+F 3 "" H 2350 3750 50  0001 C CNN
+	1    2600 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 4300 2700 5300
+Wire Wire Line
+	2700 5300 4950 5300
+Wire Wire Line
+	4950 5300 4950 5600
+Wire Wire Line
+	2600 4300 2600 5350
+Wire Wire Line
+	2600 5350 4900 5350
+Wire Wire Line
+	4900 5350 4900 5700
+Wire Wire Line
+	4900 5700 4950 5700
+Text Notes 7750 2650 0    50   ~ 0
+Note: R18 opt curr lim resistor to be monuted \non 18v17 or via addl pins and mounted on board.
 $EndSCHEMATC
