@@ -7,7 +7,7 @@ encoding utf-8
 Sheet 1 1
 Title "Medido Pump / Particle Argon"
 Date "2020-03-20"
-Rev "1.0"
+Rev "2.0"
 Comp "DFM"
 Comment1 ""
 Comment2 ""
@@ -927,13 +927,13 @@ Wire Wire Line
 Wire Wire Line
 	4200 1950 4950 1950
 Wire Wire Line
-	6050 2650 6050 4800
+	6050 2650 6050 4000
 Wire Wire Line
 	6050 4800 6250 4800
 Wire Wire Line
 	6050 2550 6200 2550
 Wire Wire Line
-	6200 2550 6200 4600
+	6200 2550 6200 4050
 Wire Wire Line
 	6200 4600 5850 4600
 Wire Wire Line
@@ -946,8 +946,6 @@ Wire Wire Line
 	6300 2050 6300 3100
 Wire Wire Line
 	6300 3100 5950 3100
-Wire Wire Line
-	5950 3100 5950 4700
 Wire Wire Line
 	5950 4700 6250 4700
 Wire Wire Line
@@ -1140,12 +1138,12 @@ $EndComp
 $Comp
 L Device:C C5
 U 1 1 5ED5F57F
-P 1600 1650
-F 0 "C5" H 1715 1696 50  0000 L CNN
-F 1 "0.1uF" H 1715 1605 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D12.0mm_W4.4mm_P7.75mm" H 1638 1500 50  0001 C CNN
-F 3 "~" H 1600 1650 50  0001 C CNN
-	1    1600 1650
+P 1600 1700
+F 0 "C5" H 1715 1746 50  0000 L CNN
+F 1 "0.1uF" H 1715 1655 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D12.0mm_W4.4mm_P7.75mm" H 1638 1550 50  0001 C CNN
+F 3 "~" H 1600 1700 50  0001 C CNN
+	1    1600 1700
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1218,8 +1216,6 @@ Wire Wire Line
 	1700 850  2550 850 
 Wire Wire Line
 	2550 850  2550 1250
-Wire Wire Line
-	1600 1550 1300 1550
 $Comp
 L Switch:SW_Push SW2
 U 1 1 5ED9512A
@@ -1261,8 +1257,6 @@ F 3 "" H 1950 1950 50  0001 C CNN
 	1    1950 1950
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1600 1800 1600 1950
 $Comp
 L Device:R_Small_US R13
 U 1 1 5EDBA657
@@ -1288,8 +1282,6 @@ $EndComp
 Wire Wire Line
 	2550 1250 3050 1250
 Connection ~ 2550 1250
-Wire Wire Line
-	3250 950  3350 950 
 Wire Wire Line
 	6600 800  6600 1000
 Wire Wire Line
@@ -1326,17 +1318,6 @@ F 3 "" H 2500 3100 50  0001 C CNN
 	1    2500 3100
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:+5V #PWR024
-U 1 1 5EE3F7B0
-P 2500 2150
-F 0 "#PWR024" H 2500 2000 50  0001 C CNN
-F 1 "+5V" H 2515 2323 50  0000 C CNN
-F 2 "" H 2500 2150 50  0001 C CNN
-F 3 "" H 2500 2150 50  0001 C CNN
-	1    2500 2150
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2600 3950 2600 4350
 Wire Wire Line
@@ -1344,11 +1325,8 @@ Wire Wire Line
 Connection ~ 850  1550
 Wire Wire Line
 	1300 2050 1300 1550
-Connection ~ 1300 1550
 Wire Wire Line
 	1300 1550 1250 1550
-Wire Wire Line
-	3350 950  3350 3450
 Connection ~ 3350 3800
 Wire Wire Line
 	6600 2150 6600 3000
@@ -1358,8 +1336,6 @@ Wire Wire Line
 	3150 3000 3150 1750
 Wire Wire Line
 	2450 1750 3150 1750
-Wire Wire Line
-	2850 950  2850 3800
 Wire Wire Line
 	2850 3800 1490 3800
 Connection ~ 1490 3800
@@ -1371,7 +1347,6 @@ Wire Wire Line
 	4700 3450 3350 3450
 Wire Wire Line
 	4700 3200 6300 3200
-Connection ~ 3350 3450
 Wire Wire Line
 	3350 3450 3350 3800
 Wire Wire Line
@@ -1432,4 +1407,139 @@ Wire Wire Line
 	4750 3800 4850 3800
 Wire Wire Line
 	4850 3800 4850 3900
+$Comp
+L Device:R_Small_US R20
+U 1 1 5EEF73E9
+P 5450 3800
+F 0 "R20" H 5518 3846 50  0000 L CNN
+F 1 "4K7" H 5518 3755 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 5450 3800 50  0001 C CNN
+F 3 "~" H 5450 3800 50  0001 C CNN
+	1    5450 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R21
+U 1 1 5EEF74AA
+P 5700 3800
+F 0 "R21" H 5768 3846 50  0000 L CNN
+F 1 "4K7" H 5768 3755 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 5700 3800 50  0001 C CNN
+F 3 "~" H 5700 3800 50  0001 C CNN
+	1    5700 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0101
+U 1 1 5EEF7739
+P 5450 3700
+F 0 "#PWR0101" H 5450 3550 50  0001 C CNN
+F 1 "+3V3" H 5465 3873 50  0000 C CNN
+F 2 "" H 5450 3700 50  0001 C CNN
+F 3 "" H 5450 3700 50  0001 C CNN
+	1    5450 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 3700 5700 3700
+Connection ~ 5450 3700
+Wire Wire Line
+	5700 3900 5700 4000
+Wire Wire Line
+	5700 4000 6050 4000
+Connection ~ 6050 4000
+Wire Wire Line
+	6050 4000 6050 4800
+Wire Wire Line
+	5450 3900 5450 4050
+Wire Wire Line
+	5950 3100 5950 4700
+Wire Wire Line
+	5450 4050 6200 4050
+Connection ~ 6200 4050
+Wire Wire Line
+	6200 4050 6200 4600
+Text Notes 5400 4200 0    50   ~ 0
+I2C Pullups
+Wire Wire Line
+	1600 1550 1600 1500
+Wire Wire Line
+	1600 1850 1600 1950
+Wire Wire Line
+	1300 1550 1600 1550
+Connection ~ 1300 1550
+Connection ~ 1600 1550
+Wire Wire Line
+	2500 2150 2850 2150
+Wire Wire Line
+	2850 2150 2850 3800
+Wire Wire Line
+	2850 950  2850 1600
+Wire Wire Line
+	2850 1600 3350 1600
+Wire Wire Line
+	3350 1600 3350 3450
+Connection ~ 3350 3450
+Wire Wire Line
+	3250 950  3250 2150
+Wire Wire Line
+	3250 2150 2850 2150
+Connection ~ 2850 2150
+$Comp
+L Jumper:SolderJumper_2_Open JP1
+U 1 1 5ED659D2
+P 1700 5400
+F 0 "JP1" V 1654 5468 50  0000 L CNN
+F 1 "JPF" V 1745 5468 50  0000 L CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 1700 5400 50  0001 C CNN
+F 3 "~" H 1700 5400 50  0001 C CNN
+	1    1700 5400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1700 5200 1700 5250
+Connection ~ 1700 5200
+Wire Wire Line
+	1700 5550 1900 5550
+Wire Wire Line
+	1900 5550 1900 5200
+Connection ~ 1900 5200
+$Comp
+L Jumper:SolderJumper_2_Open JP2
+U 1 1 5ED7A057
+P 1700 6300
+F 0 "JP2" V 1654 6368 50  0000 L CNN
+F 1 "JPR" V 1745 6368 50  0000 L CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 1700 6300 50  0001 C CNN
+F 3 "~" H 1700 6300 50  0001 C CNN
+	1    1700 6300
+	0    1    1    0   
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Open JP3
+U 1 1 5ED7A250
+P 1700 7350
+F 0 "JP3" V 1654 7418 50  0000 L CNN
+F 1 "JPS" V 1745 7418 50  0000 L CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 1700 7350 50  0001 C CNN
+F 3 "~" H 1700 7350 50  0001 C CNN
+	1    1700 7350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1700 6150 1700 6100
+Connection ~ 1700 6100
+Wire Wire Line
+	1700 6450 1900 6450
+Wire Wire Line
+	1900 6450 1900 6100
+Connection ~ 1900 6100
+Wire Wire Line
+	1700 7200 1700 7150
+Connection ~ 1700 7150
+Wire Wire Line
+	1700 7500 1900 7500
+Wire Wire Line
+	1900 7500 1900 7150
+Connection ~ 1900 7150
 $EndSCHEMATC
