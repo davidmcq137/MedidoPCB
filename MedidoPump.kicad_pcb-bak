@@ -1597,7 +1597,7 @@
     (descr "Through hole straight pin header, 1x05, 2.54mm pitch, single row")
     (tags "Through hole pin header THT 1x05 2.54mm single row")
     (path /5E6A04FC)
-    (fp_text reference J5 (at -2.54 5.08 -270) (layer F.SilkS)
+    (fp_text reference J5 (at 0 13.208 -180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value "OLED Disp" (at 0 14.605) (layer F.Fab)
