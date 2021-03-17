@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:NewMC-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -202,4 +203,103 @@ Wire Wire Line
 Wire Wire Line
 	1750 1950 1750 2000
 Connection ~ 3050 1950
+$Comp
+L Device:D_Zener D1
+U 1 1 602C746D
+P 5950 2450
+F 0 "D1" V 5904 2529 50  0000 L CNN
+F 1 "D_Zener 3.3V" V 5995 2529 50  0000 L CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P2.54mm_Vertical_KathodeUp" H 5950 2450 50  0001 C CNN
+F 3 "~" H 5950 2450 50  0001 C CNN
+	1    5950 2450
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 602C74EB
+P 5950 2150
+F 0 "R1" H 6020 2196 50  0000 L CNN
+F 1 "1K" H 6020 2105 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 5880 2150 50  0001 C CNN
+F 3 "~" H 5950 2150 50  0001 C CNN
+	1    5950 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 1950 5950 1950
+Wire Wire Line
+	5950 1950 5950 2000
+Connection ~ 5500 1950
+$Comp
+L power:GND #PWR010
+U 1 1 602C787C
+P 5950 2600
+F 0 "#PWR010" H 5950 2350 50  0001 C CNN
+F 1 "GND" H 5955 2427 50  0000 C CNN
+F 2 "" H 5950 2600 50  0001 C CNN
+F 3 "" H 5950 2600 50  0001 C CNN
+	1    5950 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 2300 5950 2300
+Connection ~ 5950 2300
+$Comp
+L Device:CP1 C3
+U 1 1 602C96D0
+P 6450 3250
+F 0 "C3" H 6565 3296 50  0000 L CNN
+F 1 "CP1" H 6565 3205 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 6450 3250 50  0001 C CNN
+F 3 "~" H 6450 3250 50  0001 C CNN
+	1    6450 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR012
+U 1 1 602C9768
+P 6450 3400
+F 0 "#PWR012" H 6450 3150 50  0001 C CNN
+F 1 "GND" H 6455 3227 50  0000 C CNN
+F 2 "" H 6450 3400 50  0001 C CNN
+F 3 "" H 6450 3400 50  0001 C CNN
+	1    6450 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 2400 5500 3100
+Connection ~ 5500 2400
+Wire Wire Line
+	5950 2300 6700 2300
+Wire Wire Line
+	6700 2300 6700 3100
+Wire Wire Line
+	6700 3100 6450 3100
+$Comp
+L power:GND #PWR011
+U 1 1 602C9FB1
+P 6150 3400
+F 0 "#PWR011" H 6150 3150 50  0001 C CNN
+F 1 "GND" H 6155 3227 50  0000 C CNN
+F 2 "" H 6150 3400 50  0001 C CNN
+F 3 "" H 6150 3400 50  0001 C CNN
+	1    6150 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:L78L05_SOT89 U3
+U 1 1 602CA35D
+P 6150 3100
+F 0 "U3" H 6150 3342 50  0000 C CNN
+F 1 "L4931 3.3V Reg" H 6150 3251 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 6150 3300 50  0001 C CIN
+F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/15/55/e5/aa/23/5b/43/fd/CD00000446.pdf/files/CD00000446.pdf/jcr:content/translations/en.CD00000446.pdf" H 6150 3050 50  0001 C CNN
+	1    6150 3100
+	1    0    0    -1  
+$EndComp
+Text Notes 5300 1600 0    50   ~ 0
+Note: Install one of Zener OR L4931
+Connection ~ 6450 3100
+Wire Wire Line
+	5500 3100 5850 3100
 $EndSCHEMATC

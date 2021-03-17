@@ -1,0 +1,228 @@
+EESchema Schematic File Version 4
+LIBS:BLEFriendJeti-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "BLE UART card for Jeti"
+Date "2021-03-11"
+Rev "1"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L medido2:BLE_FRIEND U1
+U 1 1 604A719A
+P 5500 2200
+F 0 "U1" H 5223 2097 60  0000 R CNN
+F 1 "BLE_FRIEND" H 5223 2203 60  0000 R CNN
+F 2 "MedidoFootprints:BLE_FRIEND" H 5500 2200 60  0001 C CNN
+F 3 "" H 5500 2200 60  0001 C CNN
+	1    5500 2200
+	-1   0    0    1   
+$EndComp
+$Comp
+L medido2:JetiWurth J3
+U 1 1 604A721C
+P 2550 2900
+F 0 "J3" H 2550 3315 50  0000 C CNN
+F 1 "JetiWurth" H 2550 3224 50  0000 C CNN
+F 2 "MedidoFootprints:JetiWurth" H 2450 2800 50  0001 C CNN
+F 3 "" H 2450 2800 50  0001 C CNN
+	1    2550 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L medido2:JetiWurth J1
+U 1 1 604A7296
+P 2550 1850
+F 0 "J1" H 2550 2265 50  0000 C CNN
+F 1 "JetiWurth" H 2550 2174 50  0000 C CNN
+F 2 "MedidoFootprints:JetiWurth" H 2450 1750 50  0001 C CNN
+F 3 "" H 2450 1750 50  0001 C CNN
+	1    2550 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:2N3906 Q1
+U 1 1 604A734A
+P 4300 1900
+F 0 "Q1" H 4491 1854 50  0000 L CNN
+F 1 "2N3906" H 4491 1945 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92L_HandSolder" H 4500 1825 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3906.pdf" H 4300 1900 50  0001 L CNN
+	1    4300 1900
+	1    0    0    1   
+$EndComp
+$Comp
+L Transistor_BJT:2N3904 Q2
+U 1 1 604A7452
+P 3550 2900
+F 0 "Q2" H 3741 2946 50  0000 L CNN
+F 1 "2N3904" H 3741 2855 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92L_HandSolder" H 3750 2825 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 3550 2900 50  0001 L CNN
+	1    3550 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R1
+U 1 1 604A74DF
+P 3250 2900
+F 0 "R1" V 3455 2900 50  0000 C CNN
+F 1 "1K" V 3364 2900 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" H 3250 2900 50  0001 C CNN
+F 3 "~" H 3250 2900 50  0001 C CNN
+	1    3250 2900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small_US R2
+U 1 1 604A7571
+P 3650 2400
+F 0 "R2" H 3718 2446 50  0000 L CNN
+F 1 "10K" H 3718 2355 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" H 3650 2400 50  0001 C CNN
+F 3 "~" H 3650 2400 50  0001 C CNN
+	1    3650 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 604A7A87
+P 3650 3100
+F 0 "#PWR01" H 3650 2850 50  0001 C CNN
+F 1 "GND" H 3655 2927 50  0000 C CNN
+F 2 "" H 3650 3100 50  0001 C CNN
+F 3 "" H 3650 3100 50  0001 C CNN
+	1    3650 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 2900 3150 2900
+Wire Wire Line
+	4100 1900 3950 1900
+Wire Wire Line
+	3950 2700 3650 2700
+$Comp
+L Device:R_Small_US R3
+U 1 1 604A7BEF
+P 3950 2200
+F 0 "R3" H 4018 2246 50  0000 L CNN
+F 1 "1K" H 4018 2155 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" H 3950 2200 50  0001 C CNN
+F 3 "~" H 3950 2200 50  0001 C CNN
+	1    3950 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 1900 3950 2100
+Wire Wire Line
+	3950 2300 3950 2700
+Wire Wire Line
+	4400 2100 4400 2800
+Wire Wire Line
+	4400 2800 5400 2800
+$Comp
+L power:GND #PWR0101
+U 1 1 604A7D72
+P 5600 2800
+F 0 "#PWR0101" H 5600 2550 50  0001 C CNN
+F 1 "GND" H 5605 2627 50  0000 C CNN
+F 2 "" H 5600 2800 50  0001 C CNN
+F 3 "" H 5600 2800 50  0001 C CNN
+	1    5600 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 604A7DAC
+P 5100 1500
+F 0 "#PWR0102" H 5100 1250 50  0001 C CNN
+F 1 "GND" H 5105 1327 50  0000 C CNN
+F 2 "" H 5100 1500 50  0001 C CNN
+F 3 "" H 5100 1500 50  0001 C CNN
+	1    5100 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 1500 5100 1500
+Wire Wire Line
+	3650 2500 3650 2700
+Connection ~ 3650 2700
+Wire Wire Line
+	3650 2300 3650 1700
+Wire Wire Line
+	2950 1700 3650 1700
+Connection ~ 3650 1700
+Wire Wire Line
+	3650 1700 4400 1700
+NoConn ~ 5100 2300
+NoConn ~ 5100 2000
+Wire Wire Line
+	5100 2200 4900 2200
+Wire Wire Line
+	4900 2200 4900 1550
+Wire Wire Line
+	4900 1550 3050 1550
+Wire Wire Line
+	3050 1550 3050 1850
+Wire Wire Line
+	3050 1850 2950 1850
+Wire Wire Line
+	5100 2100 4950 2100
+Wire Wire Line
+	4950 2100 4950 1350
+Wire Wire Line
+	4950 1350 1950 1350
+Wire Wire Line
+	1950 1350 1950 1950
+Wire Wire Line
+	1950 1950 2150 1950
+$Comp
+L power:GND #PWR0103
+U 1 1 604A890E
+P 2150 2100
+F 0 "#PWR0103" H 2150 1850 50  0001 C CNN
+F 1 "GND" H 2155 1927 50  0000 C CNN
+F 2 "" H 2150 2100 50  0001 C CNN
+F 3 "" H 2150 2100 50  0001 C CNN
+	1    2150 2100
+	1    0    0    -1  
+$EndComp
+NoConn ~ 2950 3050
+NoConn ~ 2950 2750
+NoConn ~ 2150 2850
+NoConn ~ 2150 3000
+NoConn ~ 2950 2000
+NoConn ~ 3050 4250
+NoConn ~ 4600 2000
+$Comp
+L power:GND #PWR?
+U 1 1 604B5FD6
+P 2150 3150
+F 0 "#PWR?" H 2150 2900 50  0001 C CNN
+F 1 "GND" H 2155 2977 50  0000 C CNN
+F 2 "" H 2150 3150 50  0001 C CNN
+F 3 "" H 2150 3150 50  0001 C CNN
+	1    2150 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 604B6010
+P 1750 1800
+F 0 "#PWR?" H 1750 1550 50  0001 C CNN
+F 1 "GND" H 1755 1627 50  0000 C CNN
+F 2 "" H 1750 1800 50  0001 C CNN
+F 3 "" H 1750 1800 50  0001 C CNN
+	1    1750 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2150 1800 1750 1800
+$EndSCHEMATC

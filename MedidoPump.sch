@@ -7,7 +7,7 @@ encoding utf-8
 Sheet 1 1
 Title "Medido Pump / Particle Argon"
 Date "2020-03-20"
-Rev "2.0"
+Rev "3.0"
 Comp "DFM"
 Comment1 ""
 Comment2 ""
@@ -1724,8 +1724,4 @@ F 3 "" H 2900 5500 50  0001 C CNN
 	1    2900 5500
 	1    0    0    -1  
 $EndComp
-Connection ~ 2900 5500
-Connection ~ 2900 6400
-Connection ~ 2900 7450
-Connection ~ 2950 5250
 $EndSCHEMATC

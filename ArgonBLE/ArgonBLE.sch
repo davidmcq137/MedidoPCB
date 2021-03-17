@@ -1,0 +1,177 @@
+EESchema Schematic File Version 4
+LIBS:ArgonBLE-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L medido2:Particle_Argon U1
+U 1 1 60388CAC
+P 3050 2850
+F 0 "U1" H 3050 3825 50  0000 C CNN
+F 1 "Particle_Argon" H 3050 3734 50  0000 C CNN
+F 2 "MedidoFootprints:Particle_Argon" H 3050 2850 50  0001 C CNN
+F 3 "" H 3050 2850 50  0001 C CNN
+	1    3050 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L medido2:JetiWurth J3
+U 1 1 6038936C
+P 6400 3300
+F 0 "J3" H 6400 3715 50  0000 C CNN
+F 1 "JetiWurth" H 6400 3624 50  0000 C CNN
+F 2 "MedidoFootprints:JetiWurth" H 6300 3200 50  0001 C CNN
+F 3 "" H 6300 3200 50  0001 C CNN
+	1    6400 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Q_PNP_EBC Q1
+U 1 1 603894A7
+P 4600 2250
+F 0 "Q1" H 4791 2204 50  0000 L CNN
+F 1 "2N3906" H 4791 2295 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_HandSolder" H 4800 2350 50  0001 C CNN
+F 3 "~" H 4600 2250 50  0001 C CNN
+	1    4600 2250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_Small_US R1
+U 1 1 60389693
+P 4900 2250
+F 0 "R1" V 4695 2250 50  0000 C CNN
+F 1 "1K" V 4786 2250 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 4900 2250 50  0001 C CNN
+F 3 "~" H 4900 2250 50  0001 C CNN
+	1    4900 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L medido2:JetiWurth J1
+U 1 1 60389778
+P 6400 2450
+F 0 "J1" H 6400 2865 50  0000 C CNN
+F 1 "JetiWurth" H 6400 2774 50  0000 C CNN
+F 2 "MedidoFootprints:JetiWurth" H 6300 2350 50  0001 C CNN
+F 3 "" H 6300 2350 50  0001 C CNN
+	1    6400 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 60389A2F
+P 2250 2400
+F 0 "#PWR0101" H 2250 2150 50  0001 C CNN
+F 1 "GND" H 2255 2227 50  0000 C CNN
+F 2 "" H 2250 2400 50  0001 C CNN
+F 3 "" H 2250 2400 50  0001 C CNN
+	1    2250 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2250 2400 2500 2400
+Wire Wire Line
+	3600 2700 4500 2700
+Wire Wire Line
+	4500 2700 4500 2450
+$Comp
+L power:GND #PWR0102
+U 1 1 60389A9A
+P 5650 2400
+F 0 "#PWR0102" H 5650 2150 50  0001 C CNN
+F 1 "GND" H 5655 2227 50  0000 C CNN
+F 2 "" H 5650 2400 50  0001 C CNN
+F 3 "" H 5650 2400 50  0001 C CNN
+	1    5650 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 2400 5850 2400
+Wire Wire Line
+	4500 2050 4500 1900
+Wire Wire Line
+	4500 1900 6950 1900
+Wire Wire Line
+	6950 1900 6950 2300
+Wire Wire Line
+	6950 2300 6800 2300
+Wire Wire Line
+	6000 3550 5850 3550
+Wire Wire Line
+	5850 3550 5850 2400
+Connection ~ 5850 2400
+Wire Wire Line
+	5850 2400 6000 2400
+Wire Wire Line
+	6800 3300 6900 3300
+Wire Wire Line
+	6900 3300 6900 3850
+Wire Wire Line
+	6000 2550 5750 2550
+Wire Wire Line
+	5750 2550 5750 4000
+Wire Wire Line
+	5750 4000 2300 4000
+Wire Wire Line
+	2300 4000 2300 3500
+Wire Wire Line
+	2300 3500 2500 3500
+Wire Wire Line
+	2500 3400 2200 3400
+Wire Wire Line
+	2200 3400 2200 4100
+Wire Wire Line
+	2200 4100 7000 4100
+Wire Wire Line
+	7000 4100 7000 2450
+Wire Wire Line
+	7000 2450 6800 2450
+Wire Wire Line
+	5000 2250 5100 2250
+Wire Wire Line
+	5100 2250 5100 3850
+Wire Wire Line
+	5100 3850 6900 3850
+NoConn ~ 6000 2700
+NoConn ~ 6800 2600
+NoConn ~ 6800 3150
+NoConn ~ 6800 3450
+NoConn ~ 6000 3250
+NoConn ~ 6000 3400
+NoConn ~ 3600 3600
+NoConn ~ 3600 3500
+NoConn ~ 3600 3400
+NoConn ~ 3600 3300
+NoConn ~ 3600 3200
+NoConn ~ 3600 3100
+NoConn ~ 3600 3000
+NoConn ~ 3600 2900
+NoConn ~ 3600 2800
+NoConn ~ 3600 2600
+NoConn ~ 3600 2500
+NoConn ~ 2500 2100
+NoConn ~ 2500 2200
+NoConn ~ 2500 2300
+NoConn ~ 2500 2500
+NoConn ~ 2500 2600
+NoConn ~ 2500 2700
+NoConn ~ 2500 2800
+NoConn ~ 2500 2900
+NoConn ~ 2500 3000
+NoConn ~ 2500 3100
+NoConn ~ 2500 3200
+NoConn ~ 2500 3300
+NoConn ~ 2500 3600
+$EndSCHEMATC
