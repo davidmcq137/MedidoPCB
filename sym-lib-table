@@ -1,4 +1,6 @@
 (sym_lib_table
-  (lib (name medido)(type Legacy)(uri /home/davidmcq/DeltaScale/MedidoPump/medido.lib)(options "")(descr ""))
-  (lib (name MedidoPump-rescue)(type Legacy)(uri ${KIPRJMOD}/MedidoPump-rescue.lib)(options "")(descr "")(disabled))
+  (version 7)
+  (lib (name "medido")(type "KiCad")(uri "/home/davidmcq/DeltaScale/MedidoPump/medido.kicad_sym")(options "")(descr ""))
+  (lib (name "MedidoPump-rescue")(type "KiCad")(uri "${KIPRJMOD}/MedidoPump-rescue.kicad_sym")(options "")(descr ""))
+  (lib (name "New_Library")(type "KiCad")(uri "${KIPRJMOD}/New_Library.kicad_sym")(options "")(descr ""))
 )

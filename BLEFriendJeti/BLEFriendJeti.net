@@ -1,191 +1,440 @@
-(export (version D)
-  (design
-    (source /home/davidmcq/MedidoPumpArgonV1/BLEFriendJeti/BLEFriendJeti.sch)
-    (date "Thu 11 Mar 2021 10:22:22 PM EST")
-    (tool "Eeschema 5.0.2+dfsg1-1")
-    (sheet (number 1) (name /) (tstamps /)
-      (title_block
-        (title "BLE UART card for Jeti")
-        (company)
-        (rev 1)
-        (date 2021-03-11)
-        (source BLEFriendJeti.sch)
-        (comment (number 1) (value ""))
-        (comment (number 2) (value ""))
-        (comment (number 3) (value ""))
-        (comment (number 4) (value "")))))
-  (components
-    (comp (ref U1)
-      (value BLE_FRIEND)
-      (footprint MedidoFootprints:BLE_FRIEND)
-      (libsource (lib medido2) (part BLE_FRIEND) (description ""))
-      (sheetpath (names /) (tstamps /))
-      (tstamp 604A719A))
-    (comp (ref J3)
-      (value JetiWurth)
-      (footprint MedidoFootprints:JetiWurth)
-      (libsource (lib medido2) (part JetiWurth) (description ""))
-      (sheetpath (names /) (tstamps /))
-      (tstamp 604A721C))
-    (comp (ref J1)
-      (value JetiWurth)
-      (footprint MedidoFootprints:JetiWurth)
-      (libsource (lib medido2) (part JetiWurth) (description ""))
-      (sheetpath (names /) (tstamps /))
-      (tstamp 604A7296))
-    (comp (ref Q1)
-      (value 2N3906)
-      (footprint Package_TO_SOT_THT:TO-92L_HandSolder)
-      (datasheet https://www.fairchildsemi.com/datasheets/2N/2N3906.pdf)
-      (libsource (lib Transistor_BJT) (part 2N3906) (description "-0.2A Ic, -40V Vce, Small Signal PNP Transistor, TO-92"))
-      (sheetpath (names /) (tstamps /))
-      (tstamp 604A734A))
-    (comp (ref Q2)
-      (value 2N3904)
-      (footprint Package_TO_SOT_THT:TO-92L_HandSolder)
-      (datasheet https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf)
-      (libsource (lib Transistor_BJT) (part 2N3904) (description "0.2A Ic, 40V Vce, Small Signal NPN Transistor, TO-92"))
-      (sheetpath (names /) (tstamps /))
-      (tstamp 604A7452))
-    (comp (ref R1)
-      (value 1K)
-      (footprint Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal)
-      (datasheet ~)
-      (libsource (lib Device) (part R_Small_US) (description "Resistor, small US symbol"))
-      (sheetpath (names /) (tstamps /))
-      (tstamp 604A74DF))
-    (comp (ref R2)
-      (value 10K)
-      (footprint Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal)
-      (datasheet ~)
-      (libsource (lib Device) (part R_Small_US) (description "Resistor, small US symbol"))
-      (sheetpath (names /) (tstamps /))
-      (tstamp 604A7571))
-    (comp (ref R3)
-      (value 1K)
-      (footprint Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal)
-      (datasheet ~)
-      (libsource (lib Device) (part R_Small_US) (description "Resistor, small US symbol"))
-      (sheetpath (names /) (tstamps /))
-      (tstamp 604A7BEF)))
-  (libparts
-    (libpart (lib Device) (part R_Small_US)
-      (description "Resistor, small US symbol")
-      (docs ~)
-      (footprints
-        (fp R_*))
-      (fields
-        (field (name Reference) R)
-        (field (name Value) R_Small_US))
-      (pins
-        (pin (num 1) (name ~) (type passive))
-        (pin (num 2) (name ~) (type passive))))
-    (libpart (lib Transistor_BJT) (part 2N3904)
-      (description "0.2A Ic, 40V Vce, Small Signal NPN Transistor, TO-92")
-      (docs https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf)
-      (footprints
-        (fp TO?92*))
-      (fields
-        (field (name Reference) Q)
-        (field (name Value) 2N3904)
-        (field (name Footprint) Package_TO_SOT_THT:TO-92_Inline))
-      (pins
-        (pin (num 1) (name E) (type passive))
-        (pin (num 2) (name B) (type passive))
-        (pin (num 3) (name C) (type passive))))
-    (libpart (lib Transistor_BJT) (part 2N3906)
-      (aliases
-        (alias 2N3905))
-      (description "-0.2A Ic, -40V Vce, Small Signal PNP Transistor, TO-92")
-      (docs https://www.fairchildsemi.com/datasheets/2N/2N3906.pdf)
-      (footprints
-        (fp TO?92*))
-      (fields
-        (field (name Reference) Q)
-        (field (name Value) 2N3906)
-        (field (name Footprint) Package_TO_SOT_THT:TO-92_Inline))
-      (pins
-        (pin (num 1) (name E) (type passive))
-        (pin (num 2) (name B) (type input))
-        (pin (num 3) (name C) (type passive))))
-    (libpart (lib medido2) (part BLE_FRIEND)
-      (fields
-        (field (name Reference) U)
-        (field (name Value) BLE_FRIEND))
-      (pins
-        (pin (num 1) (name MOD) (type input))
-        (pin (num 2) (name CTS) (type input))
-        (pin (num 3) (name TXO) (type output))
-        (pin (num 4) (name RXI) (type input))
-        (pin (num 5) (name VIN) (type power_in))
-        (pin (num 6) (name RTS) (type input))
-        (pin (num 7) (name GND) (type power_in))
-        (pin (num 8) (name DFU) (type NotConnected))))
-    (libpart (lib medido2) (part JetiWurth)
-      (fields
-        (field (name Reference) J)
-        (field (name Value) JetiWurth))
-      (pins
-        (pin (num 1) (name P1) (type input))
-        (pin (num 2) (name P2) (type input))
-        (pin (num 3) (name P3) (type input))
-        (pin (num 4) (name P4) (type input))
-        (pin (num 5) (name P5) (type input))
-        (pin (num 6) (name P6) (type input)))))
-  (libraries
-    (library (logical Device)
-      (uri /usr/share/kicad/library/Device.lib))
-    (library (logical Transistor_BJT)
-      (uri /usr/share/kicad/library/Transistor_BJT.lib))
-    (library (logical medido2)
-      (uri /home/davidmcq/MedidoPumpArgonV1/medido2.lib)))
-  (nets
-    (net (code 1) (name "Net-(J1-Pad2)")
-      (node (ref Q1) (pin 1))
-      (node (ref J1) (pin 2))
-      (node (ref R2) (pin 1)))
-    (net (code 2) (name "Net-(J1-Pad4)")
-      (node (ref J1) (pin 4))
-      (node (ref U1) (pin 4)))
-    (net (code 3) (name "Net-(U1-Pad1)")
-      (node (ref U1) (pin 1)))
-    (net (code 4) (name "Net-(U1-Pad6)")
-      (node (ref U1) (pin 6)))
-    (net (code 5) (name GND)
-      (node (ref J1) (pin 5))
-      (node (ref U1) (pin 2))
-      (node (ref Q2) (pin 1))
-      (node (ref U1) (pin 7))
-      (node (ref J1) (pin 1))
-      (node (ref J3) (pin 5)))
-    (net (code 6) (name "Net-(Q1-Pad3)")
-      (node (ref Q1) (pin 3))
-      (node (ref U1) (pin 5)))
-    (net (code 7) (name "Net-(J3-Pad1)")
-      (node (ref J3) (pin 1)))
-    (net (code 10) (name "Net-(J1-Pad6)")
-      (node (ref J1) (pin 6)))
-    (net (code 11) (name "Net-(J3-Pad3)")
-      (node (ref J3) (pin 3)))
-    (net (code 12) (name "Net-(J3-Pad2)")
-      (node (ref J3) (pin 2)))
-    (net (code 13) (name "Net-(J3-Pad6)")
-      (node (ref J3) (pin 6)))
-    (net (code 14) (name "Net-(J1-Pad3)")
-      (node (ref J1) (pin 3))
-      (node (ref U1) (pin 3)))
-    (net (code 15) (name "Net-(J3-Pad4)")
-      (node (ref R1) (pin 1))
-      (node (ref J3) (pin 4)))
-    (net (code 16) (name "Net-(U1-Pad8)")
-      (node (ref U1) (pin 8)))
-    (net (code 17) (name "Net-(Q2-Pad3)")
-      (node (ref R3) (pin 2))
-      (node (ref R2) (pin 2))
-      (node (ref Q2) (pin 3)))
-    (net (code 18) (name "Net-(Q1-Pad2)")
-      (node (ref Q1) (pin 2))
-      (node (ref R3) (pin 1)))
-    (net (code 19) (name "Net-(Q2-Pad2)")
-      (node (ref R1) (pin 2))
-      (node (ref Q2) (pin 2)))))
+(export 
+  (version D) 
+  (design 
+    (source /home/davidmcq/MedidoPumpESP32//BLEFriendJeti/BLEFriendJeti.sch) 
+    (date "Thu 11 Mar 2021 10:22:22 PM EST") 
+    (tool "Eeschema 5.0.2+dfsg1-1") 
+    (sheet 
+      (number 1) 
+      (name /) 
+      (tstamps /) 
+      (title_block 
+        (title "BLE UART card for Jeti") 
+        (company) 
+        (rev 1) 
+        (date 2021-03-11) 
+        (source BLEFriendJeti.sch) 
+        (comment 
+          (number 1) 
+          (value "")) 
+        (comment 
+          (number 2) 
+          (value "")) 
+        (comment 
+          (number 3) 
+          (value "")) 
+        (comment 
+          (number 4) 
+          (value ""))))) 
+  (components 
+    (comp 
+      (ref U1) 
+      (value BLE_FRIEND) 
+      (footprint MedidoFootprints:BLE_FRIEND) 
+      (libsource 
+        (lib medido2) 
+        (part BLE_FRIEND) 
+        (description "")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 604A719A)) 
+    (comp 
+      (ref J3) 
+      (value JetiWurth) 
+      (footprint MedidoFootprints:JetiWurth) 
+      (libsource 
+        (lib medido2) 
+        (part JetiWurth) 
+        (description "")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 604A721C)) 
+    (comp 
+      (ref J1) 
+      (value JetiWurth) 
+      (footprint MedidoFootprints:JetiWurth) 
+      (libsource 
+        (lib medido2) 
+        (part JetiWurth) 
+        (description "")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 604A7296)) 
+    (comp 
+      (ref Q1) 
+      (value 2N3906) 
+      (footprint Package_TO_SOT_THT:TO-92L_HandSolder) 
+      (datasheet https://www.fairchildsemi.com/datasheets/2N/2N3906.pdf) 
+      (libsource 
+        (lib Transistor_BJT) 
+        (part 2N3906) 
+        (description "-0.2A Ic, -40V Vce, Small Signal PNP Transistor, TO-92")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 604A734A)) 
+    (comp 
+      (ref Q2) 
+      (value 2N3904) 
+      (footprint Package_TO_SOT_THT:TO-92L_HandSolder) 
+      (datasheet https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf) 
+      (libsource 
+        (lib Transistor_BJT) 
+        (part 2N3904) 
+        (description "0.2A Ic, 40V Vce, Small Signal NPN Transistor, TO-92")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 604A7452)) 
+    (comp 
+      (ref R1) 
+      (value 1K) 
+      (footprint Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R_Small_US) 
+        (description "Resistor, small US symbol")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 604A74DF)) 
+    (comp 
+      (ref R2) 
+      (value 10K) 
+      (footprint Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R_Small_US) 
+        (description "Resistor, small US symbol")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 604A7571)) 
+    (comp 
+      (ref R3) 
+      (value 1K) 
+      (footprint Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R_Small_US) 
+        (description "Resistor, small US symbol")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 604A7BEF))) 
+  (libparts 
+    (libpart 
+      (lib Device) 
+      (part R_Small_US) 
+      (description "Resistor, small US symbol") 
+      (docs ~) 
+      (footprints 
+        (fp R_*)) 
+      (fields 
+        (field 
+          (name Reference) R) 
+        (field 
+          (name Value) R_Small_US)) 
+      (pins 
+        (pin 
+          (num 1) 
+          (name ~) 
+          (type passive)) 
+        (pin 
+          (num 2) 
+          (name ~) 
+          (type passive)))) 
+    (libpart 
+      (lib Transistor_BJT) 
+      (part 2N3904) 
+      (description "0.2A Ic, 40V Vce, Small Signal NPN Transistor, TO-92") 
+      (docs https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf) 
+      (footprints 
+        (fp TO?92*)) 
+      (fields 
+        (field 
+          (name Reference) Q) 
+        (field 
+          (name Value) 2N3904) 
+        (field 
+          (name Footprint) Package_TO_SOT_THT:TO-92_Inline)) 
+      (pins 
+        (pin 
+          (num 1) 
+          (name E) 
+          (type passive)) 
+        (pin 
+          (num 2) 
+          (name B) 
+          (type passive)) 
+        (pin 
+          (num 3) 
+          (name C) 
+          (type passive)))) 
+    (libpart 
+      (lib Transistor_BJT) 
+      (part 2N3906) 
+      (aliases 
+        (alias 2N3905)) 
+      (description "-0.2A Ic, -40V Vce, Small Signal PNP Transistor, TO-92") 
+      (docs https://www.fairchildsemi.com/datasheets/2N/2N3906.pdf) 
+      (footprints 
+        (fp TO?92*)) 
+      (fields 
+        (field 
+          (name Reference) Q) 
+        (field 
+          (name Value) 2N3906) 
+        (field 
+          (name Footprint) Package_TO_SOT_THT:TO-92_Inline)) 
+      (pins 
+        (pin 
+          (num 1) 
+          (name E) 
+          (type passive)) 
+        (pin 
+          (num 2) 
+          (name B) 
+          (type input)) 
+        (pin 
+          (num 3) 
+          (name C) 
+          (type passive)))) 
+    (libpart 
+      (lib medido2) 
+      (part BLE_FRIEND) 
+      (fields 
+        (field 
+          (name Reference) U) 
+        (field 
+          (name Value) BLE_FRIEND)) 
+      (pins 
+        (pin 
+          (num 1) 
+          (name MOD) 
+          (type input)) 
+        (pin 
+          (num 2) 
+          (name CTS) 
+          (type input)) 
+        (pin 
+          (num 3) 
+          (name TXO) 
+          (type output)) 
+        (pin 
+          (num 4) 
+          (name RXI) 
+          (type input)) 
+        (pin 
+          (num 5) 
+          (name VIN) 
+          (type power_in)) 
+        (pin 
+          (num 6) 
+          (name RTS) 
+          (type input)) 
+        (pin 
+          (num 7) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num 8) 
+          (name DFU) 
+          (type NotConnected)))) 
+    (libpart 
+      (lib medido2) 
+      (part JetiWurth) 
+      (fields 
+        (field 
+          (name Reference) J) 
+        (field 
+          (name Value) JetiWurth)) 
+      (pins 
+        (pin 
+          (num 1) 
+          (name P1) 
+          (type input)) 
+        (pin 
+          (num 2) 
+          (name P2) 
+          (type input)) 
+        (pin 
+          (num 3) 
+          (name P3) 
+          (type input)) 
+        (pin 
+          (num 4) 
+          (name P4) 
+          (type input)) 
+        (pin 
+          (num 5) 
+          (name P5) 
+          (type input)) 
+        (pin 
+          (num 6) 
+          (name P6) 
+          (type input))))) 
+  (libraries 
+    (library 
+      (logical Device) 
+      (uri /usr/share/kicad/library/Device.lib)) 
+    (library 
+      (logical Transistor_BJT) 
+      (uri /usr/share/kicad/library/Transistor_BJT.lib)) 
+    (library 
+      (logical medido2) 
+      (uri /home/davidmcq/MedidoPumpArgonV1/medido2.lib))) 
+  (nets 
+    (net 
+      (code 1) 
+      (name "Net-(J1-Pad2)") 
+      (node 
+        (ref Q1) 
+        (pin 1)) 
+      (node 
+        (ref J1) 
+        (pin 2)) 
+      (node 
+        (ref R2) 
+        (pin 1))) 
+    (net 
+      (code 2) 
+      (name "Net-(J1-Pad4)") 
+      (node 
+        (ref J1) 
+        (pin 4)) 
+      (node 
+        (ref U1) 
+        (pin 4))) 
+    (net 
+      (code 3) 
+      (name "Net-(U1-Pad1)") 
+      (node 
+        (ref U1) 
+        (pin 1))) 
+    (net 
+      (code 4) 
+      (name "Net-(U1-Pad6)") 
+      (node 
+        (ref U1) 
+        (pin 6))) 
+    (net 
+      (code 5) 
+      (name GND) 
+      (node 
+        (ref J1) 
+        (pin 5)) 
+      (node 
+        (ref U1) 
+        (pin 2)) 
+      (node 
+        (ref Q2) 
+        (pin 1)) 
+      (node 
+        (ref U1) 
+        (pin 7)) 
+      (node 
+        (ref J1) 
+        (pin 1)) 
+      (node 
+        (ref J3) 
+        (pin 5))) 
+    (net 
+      (code 6) 
+      (name "Net-(Q1-Pad3)") 
+      (node 
+        (ref Q1) 
+        (pin 3)) 
+      (node 
+        (ref U1) 
+        (pin 5))) 
+    (net 
+      (code 7) 
+      (name "Net-(J3-Pad1)") 
+      (node 
+        (ref J3) 
+        (pin 1))) 
+    (net 
+      (code 10) 
+      (name "Net-(J1-Pad6)") 
+      (node 
+        (ref J1) 
+        (pin 6))) 
+    (net 
+      (code 11) 
+      (name "Net-(J3-Pad3)") 
+      (node 
+        (ref J3) 
+        (pin 3))) 
+    (net 
+      (code 12) 
+      (name "Net-(J3-Pad2)") 
+      (node 
+        (ref J3) 
+        (pin 2))) 
+    (net 
+      (code 13) 
+      (name "Net-(J3-Pad6)") 
+      (node 
+        (ref J3) 
+        (pin 6))) 
+    (net 
+      (code 14) 
+      (name "Net-(J1-Pad3)") 
+      (node 
+        (ref J1) 
+        (pin 3)) 
+      (node 
+        (ref U1) 
+        (pin 3))) 
+    (net 
+      (code 15) 
+      (name "Net-(J3-Pad4)") 
+      (node 
+        (ref R1) 
+        (pin 1)) 
+      (node 
+        (ref J3) 
+        (pin 4))) 
+    (net 
+      (code 16) 
+      (name "Net-(U1-Pad8)") 
+      (node 
+        (ref U1) 
+        (pin 8))) 
+    (net 
+      (code 17) 
+      (name "Net-(Q2-Pad3)") 
+      (node 
+        (ref R3) 
+        (pin 2)) 
+      (node 
+        (ref R2) 
+        (pin 2)) 
+      (node 
+        (ref Q2) 
+        (pin 3))) 
+    (net 
+      (code 18) 
+      (name "Net-(Q1-Pad2)") 
+      (node 
+        (ref Q1) 
+        (pin 2)) 
+      (node 
+        (ref R3) 
+        (pin 1))) 
+    (net 
+      (code 19) 
+      (name "Net-(Q2-Pad2)") 
+      (node 
+        (ref R1) 
+        (pin 2)) 
+      (node 
+        (ref Q2) 
+        (pin 2)))))

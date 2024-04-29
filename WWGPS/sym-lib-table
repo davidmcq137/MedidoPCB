@@ -1,3 +1,4 @@
 (sym_lib_table
-  (lib (name medido)(type Legacy)(uri /home/davidmcq/MedidoPumpArgonV1/medido.lib)(options "")(descr ""))
+  (version 7)
+  (lib (name "medido")(type "Legacy")(uri "/home/davidmcq/MedidoPumpArgonV1/medido.lib")(options "")(descr ""))
 )

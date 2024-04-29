@@ -1,4 +1,6 @@
 (fp_lib_table
-  (lib (name MedidoFootprints)(type KiCad)(uri ${KIPRJMOD}/MedidoFootprints.pretty)(options "")(descr ""))
-  (lib (name MedidoLogo)(type KiCad)(uri ${KIPRJMOD}/MedidoLogo.pretty)(options "")(descr ""))
+  (version 7)
+  (lib (name "MedidoFootprints")(type "KiCad")(uri "${KIPRJMOD}/MedidoFootprints.pretty")(options "")(descr ""))
+  (lib (name "MedidoLogo")(type "KiCad")(uri "${KIPRJMOD}/MedidoLogo.pretty")(options "")(descr ""))
+  (lib (name "ESPLibrary")(type "KiCad")(uri "${KIPRJMOD}/ESPLibrary.pretty")(options "")(descr ""))
 )

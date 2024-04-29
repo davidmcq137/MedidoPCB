@@ -1,3 +1,4 @@
 (fp_lib_table
-  (lib (name MedidoFootprints)(type KiCad)(uri /home/davidmcq/MedidoPumpV2/MedidoFootprints.pretty)(options "")(descr ""))
+  (version 7)
+  (lib (name "MedidoFootprints")(type "KiCad")(uri "/home/davidmcq/MedidoPumpV2/MedidoFootprints.pretty")(options "")(descr ""))
 )
